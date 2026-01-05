@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="icon" href="imagenes/CAS_logop.png">
+        <title>Rescatista</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            
+            body{
+                font-family: 'Open Sans', sans-serif;
+            }
+            
+            .contenedor{
+                padding: 60px 0;
+                width: 90%;
+                max-width: 1000px;
+                margin: auto;
+                overflow: hidden;
+            }
+            
+            header{
+                width: 100%;
+                height: 800px;
+                background: #FF512F;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, hsla(35,88%,52%,0.15), hsla(10,100%,59%,0.15)),url(imagenes/ojalaqsi.png);
+background: linear-gradient(to right, hsla(35,88%,52%,0.15), hsla(10,100%,59%,0.15)),url(imagenes/oesta.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                position: relative;
+            }
+            
+            nav{
+                display: flex;
+                padding: 30px 50px 0 0;
+            }
+
+            .logoCAS{
+                width: 50%;
+            }
+            .logoCAS img{
+                height: 50px;
+                margin-left: 30px;
+                margin-top: -5px;
+            }
+            
+            .links{
+                width: 50%;
+                text-align: right;
+            }
+            nav a{
+                color: #ffff;
+                font-weight: 300;
+                text-decoration: none;
+                margin-right: 16px;
+            }
+            
+            nav a:hover{
+                color: #000000;
+            }
+            
+            header .texto-header{
+                display: flex;
+                height: 430px;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .texto-header h1{
+                font-size: 50px;
+                color: white;
+                font-weight: 900;
+            }
+            .texto-header h2{
+                font-size: 30px;
+                color: rgb(0, 0, 0);
+                font-weight: 400;
+            }
+            
+            .contenedorop{
+                width: 100%;
+                height: calc(100vh - 200px);
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .card {
+                
+  width: calc(100% - 400px);
+  height: calc(100vh - 400px);
+  border-radius: 4px;
+  background: #fff;
+  display: flex;
+  gap: 35px;
+  padding: .4em;
+}
+
+.card a {
+  height: 100%;
+  flex: 1;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all .5s;
+  text-decoration: none;
+  border: 3px solid #1A1A1A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.uno{
+    background: url(imagenes/cadmlado1.png);
+    background-size: cover;
+}
+.dos{
+    background: url(imagenes/cadmmedio.png);
+        background-size: cover;
+}
+.tres{
+    background: url(imagenes/cadmlado2.png);
+        background-size: cover;
+}
+
+.card a:hover {
+  flex: 4;
+}
+
+.card a p {
+  min-width: 14em;
+  padding: .5em;
+  text-align: center;
+  transform: rotate(-90deg);
+  transition: all .5s;
+  text-transform: uppercase;
+  color: #ff5d93;
+  letter-spacing: .1em;
+  text-decoration: none;
+  font-weight: 800;
+    text-shadow: 
+    -1px -1px 0 #000,  /* Esquina superior izquierda */
+     1px -1px 0 #000,  /* Esquina superior derecha */
+    -1px  1px 0 #000,  /* Esquina inferior izquierda */
+     1px  1px 0 #000;
+}
+
+.card a:hover p {
+  transform: rotate(0);
+}
+            
+            .wave{
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+            }
+            
+        </style>
+    </head>
+    <body>
+        
+        <header>
+            <nav>
+                <div class="logoCAS">
+                    <a href="index.php" class="logoin">
+                        <img src="imagenes/CAS_logoHeader.png" alt="" class="logoni" draggable="false">
+                    </a>
+                </div>
+                <div class="links">
+                    <a href=""> Inicio</a>
+                    <a href="">Nuevo rescate</a>
+                    <a href="">Strays en adopción</a>
+                    <a href="">Postulaciones</a>
+                    <a href="">Cerrar Sesión</a>
+                </div>
+                
+            </nav>
+            <section class="texto-header">
+                <h1>Buen día </h1>
+                <br>
+                <h2>Gracias por ayudar a los animales a encontrar un hogar en el que sean felices</h2>
+            </section>
+                <div class="wave" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff;"></path></svg></div>
+        </header>
+        <main>
+            <section class="contenedorop">
+                <center>
+                    <div class="card">
+                        <a class="uno" href="">
+                            <p>Nuevo rescate</p>
+                        </a>
+                        <a class="dos" href="">
+                            <p>Strays en adopción</p>
+                        </a>
+                        <a class="tres" href="">
+                            <p>Postulaciones</p>
+                        </a>
+                    </div>
+                </center>
+            </section>
+        </main>
+    </body>
+</html>
