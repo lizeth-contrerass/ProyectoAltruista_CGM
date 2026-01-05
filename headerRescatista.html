@@ -14,6 +14,7 @@
             
             body{
                 font-family: 'Open Sans', sans-serif;
+                overflow: hidden;
             }
             
             .contenedor{
@@ -26,10 +27,8 @@
             
             header{
                 width: 100%;
-                height: 800px;
-                background: #FF512F;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, hsla(35,88%,52%,0.15), hsla(10,100%,59%,0.15)),url(imagenes/ojalaqsi.png);
-background: linear-gradient(to right, hsla(35,88%,52%,0.15), hsla(10,100%,59%,0.15)),url(imagenes/oesta.png);
+                height: 85px;
+                background: rgb(13, 115, 239);
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-attachment: fixed;
@@ -37,10 +36,23 @@ background: linear-gradient(to right, hsla(35,88%,52%,0.15), hsla(10,100%,59%,0.
             }
             
             nav{
-                text-align: right;
+                display: flex;
                 padding: 30px 50px 0 0;
             }
+
+            .logoCAS{
+                width: 50%;
+            }
+            .logoCAS img{
+                height: 50px;
+                margin-left: 30px;
+                margin-top: -12px;
+            }
             
+            .links{
+                width: 50%;
+                text-align: right;
+            }
             nav a{
                 color: #ffff;
                 font-weight: 300;
@@ -49,7 +61,7 @@ background: linear-gradient(to right, hsla(35,88%,52%,0.15), hsla(10,100%,59%,0.
             }
             
             nav a:hover{
-                color: #4B277A;
+                color: rgb(0, 17, 37);
             }
             
             header .texto-header{
@@ -82,21 +94,23 @@ background: linear-gradient(to right, hsla(35,88%,52%,0.15), hsla(10,100%,59%,0.
         </style>
     </head>
     <body>
-        
         <header>
             <nav>
-                <a href=""> Inicio</a>
-                <a href="">Nuevo rescate</a>
-                <a href="">Strays en adopción</a>
-                <a href="">Postulaciones</a>
-                <a href="">Cerrar Sesión</a>
+                <div class="logoCAS">
+                    <a href="index.php" class="logoin">
+                        <img src="imagenes/CAS_logoHeader.png" alt="" class="logoni" draggable="false">
+                    </a>
+                </div>
+                <div class="links">
+                    <a href=""> Inicio</a>
+                    <a href="">Nuevo rescate</a>
+                    <a href="">Strays en adopción</a>
+                    <a href="">Postulaciones</a>
+                    <a href="">Cerrar Sesión</a>
+                </div>
+                
             </nav>
-            <section class="texto-header">
-                <h1>Buen día </h1>
-                <br>
-                <h2>Gracias por ayudar a los animales a encontrar un hogar en el que sean felices</h2>
-            </section>
-                <div class="wave" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff;"></path></svg></div>
+            
         </header>
         
     </body>

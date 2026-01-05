@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Strays en adopción</title>
+    <link rel="icon" href="imagenes/CAS_logop.png">
+
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body{
+            background-color: #000;
+        }
+
+        /* ================= HEADER ================= */
+        header{
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+            height: 85px;
+            background: white;
+        }
+
+        header iframe{
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+
+        /* ================= SECCIÓN ================= */
+        .sect{
+            position: relative;
+            min-height: calc(100vh - 85px);
+            padding: 60px 5%;
+            color: white;
+        }
+
+        /* Fondo con overlay */
+        .sect::before{
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: url("imagenes/fondoStrays.jpg") center / cover no-repeat;
+            z-index: -2;
+        }
+
+        /* Capa oscura */
+        .sect::after{
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.55);
+            z-index: -1;
+        }
+
+        /* ================= GRID ================= */
+        .gridd{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            justify-items: center;
+        }
+
+        /* ================= TARJETAS ================= */
+        .cardContainer{
+            width: 100%;
+            max-width: 360px;
+            height: 450px;
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .profileDiv{
+            position: absolute;
+            inset: 0;
+            background: #023E86;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            font-size: 18px;
+            transition: transform .5s ease;
+            z-index: 2;
+        }
+
+        .cardContainer:hover .profileDiv{
+            transform: translate(-13%, -8%);
+        }
+
+        .infoDiv{
+            position: absolute;
+            inset: 0;
+            display: flex;
+            background: #4b84ca;
+            z-index: 1;
+        }
+
+        .nameDiv{
+            flex: 3;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            padding-bottom: 15px;
+            color: #000;
+        }
+
+        .socialDiv{
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .bottar{
+            background: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        .bottar img{
+            width: 35px;
+            margin-right: -40px;
+        }
+
+        /* ================= RESPONSIVE EXTRA ================= */
+        @media (max-width: 768px){
+            header{
+                height: 70px;
+            }
+
+            .sect{
+                padding-top: 40px;
+            }
+
+            .cardContainer{
+                height: 420px;
+            }
+        }
+
+        @media (max-width: 480px){
+            .cardContainer{
+                height: 380px;
+            }
+
+            .profileDiv{
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <iframe src="headerRescatista.html"></iframe>
+    </header>
+
+    <!-- SECCIÓN -->
+    <section class="sect">
+
+        <div class="gridd">
+
+            <!-- CARD -->
+            <div class="cardContainer">
+                <div class="profileDiv">
+                    <div>
+                        Cliente<br><br>
+                        Fecha
+                    </div>
+                </div>
+
+                <div class="infoDiv">
+                    <div class="nameDiv"></div>
+                    <div class="socialDiv">
+                        <form action="adoptado.php" method="post">
+                            <input type="hidden" name="recordatorio">
+                            <button class="bottar" type="submit">
+                                <img src="imagenes/adoptado.png" alt="✔">
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>
